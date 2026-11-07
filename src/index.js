@@ -93,13 +93,13 @@ async function playGame() {
     if (turn === 1) {
       sameTurn = await player2.board.waitForAttack();
       if (player2.board.allSunk()) {
-        ("Player 1 Wins!!!");
+        gameGuide.textContent = "Player 1 Wins!!!";
         return 1;
       }
     } else {
       sameTurn = await player1.board.waitForAttack();
       if (player1.board.allSunk()) {
-        ("Player 2 Wins!!!");
+        gameGuide.textContent = "Player 2 Wins!!!";
         return 2;
       }
     }

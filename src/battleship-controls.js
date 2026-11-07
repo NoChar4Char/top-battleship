@@ -88,8 +88,8 @@ export class Gameboard {
   }
 
   allSunk() {
-    for (const Ship in this.ships) {
-      if (Ship.isSunk === false) return false;
+    for (const s of this.ships) {
+      if (s.isSunk === false) return false;
     }
 
     return true;
